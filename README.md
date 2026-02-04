@@ -5,7 +5,11 @@
 It enables users to generate intelligent quizzes on any topic, attempt them with per-question timers, track performance, and view personalized analytics — all with secure authentication and Google OAuth.
 
 🌐 **Live Demo**  
+<<<<<<< HEAD
 👉
+=======
+👉 
+>>>>>>> d731b4c (Use OpenRouter and clean next config)
 
 📦 **GitHub Repository**  
 👉 https://github.com/SaurabhKP28/Quiz.AI.git
@@ -87,7 +91,11 @@ Designed for **learning, assessment, and growth**.
 - **Supabase Auth (JWT + OAuth)**
 
 ### AI
+<<<<<<< HEAD
 - **Open Router**
+=======
+- **Google OpenRouter API**
+>>>>>>> d731b4c (Use OpenRouter and clean next config)
 
 ### Deployment
 - **Vercel**
@@ -121,6 +129,10 @@ Quiz.AI/
 │ └── Layout.tsx
 ├── lib/
 │ ├── supabaseClient.ts
+<<<<<<< HEAD
+=======
+│ ├── timeUtils.ts
+>>>>>>> d731b4c (Use OpenRouter and clean next config)
 │ ├── openRouterClient.ts
 │ ├── timeUtils.ts
 │ └── types.ts
@@ -136,14 +148,21 @@ Quiz.AI/
 - Node.js **18+**
 - Supabase account
 - Google Cloud account (Oauth)
+<<<<<<< HEAD
 
 ---
 
+=======
+- Open Router
+---
+
+>>>>>>> d731b4c (Use OpenRouter and clean next config)
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/SaurabhKP28/Quiz.AI.git
 cd Quiz.AI
+<<<<<<< HEAD
 2️⃣ Install Dependencies
 npm install
 3️⃣ Environment Variables
@@ -271,4 +290,17 @@ If you want next:
 - Resume-ready project summary
 - GitHub profile pin description
 
+=======
+
+
+
+
+
+If you want next:
+- README badges (stars, tech stack, license)
+- GIF demo section
+- Resume-ready project summary
+- GitHub profile pin description
+
+>>>>>>> d731b4c (Use OpenRouter and clean next config)
 Just tell me 👍
