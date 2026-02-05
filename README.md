@@ -204,7 +204,7 @@ USING (auth.uid() = user_id);
 ```
 ---
 
-5️⃣ Configure Google OAuth
+## 5️⃣ Configure Google OAuth
 
 Supabase → Authentication → Providers → Google
 
