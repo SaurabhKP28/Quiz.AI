@@ -147,12 +147,12 @@ Quiz.AI/
 git clone https://github.com/SaurabhKP28/Quiz.AI.git
 cd Quiz.AI
 
-2️⃣ Install Dependencies
+##  2️⃣ Install Dependencies
 npm install
 
-``` bash
-3️⃣ Environment Variables
 
+## 3️⃣ Environment Variables
+``` bash
 Create a .env.local file:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
@@ -161,9 +161,11 @@ OPENROUTER_API_KEY=your_openrouter_key
 
 ```
 
-```bash
-4️⃣ Database Setup (Supabase)
+---
 
+## 4️⃣ Database Setup (Supabase)
+
+```bash
 Run in Supabase SQL Editor:
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
@@ -218,6 +220,8 @@ npm run dev
 Open:
 👉 http://localhost:3000
 
+---
+
 ## 🚀 Deployment
 
 Push code to GitHub
@@ -227,6 +231,8 @@ Import repository into Vercel
 Add environment variables
 
 Deploy 🚀
+
+---
 
 ## 📈 Performance & Optimization
 
@@ -240,7 +246,9 @@ Efficient Supabase queries
 
 Edge-ready deployment on Vercel
 
-🧪 Testing Checklist
+---
+
+## 🧪 Testing Checklist
 
 ✅ Email & Google login
 
@@ -254,7 +262,9 @@ Edge-ready deployment on Vercel
 
 ✅ Mobile responsiveness
 
-🗺️ Roadmap
+---
+
+## 🗺️ Roadmap
 
 🌙 Dark mode
 
@@ -272,7 +282,9 @@ Edge-ready deployment on Vercel
 
 MIT License © 2024 — Saurabh KP
 
-⭐ Support & Feedback
+---
+
+## ⭐ Support & Feedback
 
 If you like this project:
 
@@ -282,7 +294,9 @@ If you like this project:
 
 💬 Share feedback
 
-❤️ Built With Passion
+---
+
+## ❤️ Built With Passion
 
 Quiz.AI demonstrates real-world full-stack engineering:
 
