@@ -150,6 +150,7 @@ cd Quiz.AI
 2️⃣ Install Dependencies
 npm install
 
+``` bash
 3️⃣ Environment Variables
 
 Create a .env.local file:
@@ -158,7 +159,7 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 OPENROUTER_API_KEY=your_openrouter_key
 
-
+```
 
 ```bash
 4️⃣ Database Setup (Supabase)
@@ -196,6 +197,7 @@ FOR ALL
 USING (auth.uid() = user_id);
 
 ```
+---
 
 5️⃣ Configure Google OAuth
 
@@ -207,14 +209,16 @@ Add redirect URL:
 
 https://your-project.supabase.co/auth/v1/callback
 
-6️⃣ Run Locally
+---
+
+### 6️⃣ Run Locally
 npm run dev
 
 
 Open:
 👉 http://localhost:3000
 
-🚀 Deployment
+## 🚀 Deployment
 
 Push code to GitHub
 
@@ -224,7 +228,7 @@ Add environment variables
 
 Deploy 🚀
 
-📈 Performance & Optimization
+## 📈 Performance & Optimization
 
 Automatic code splitting
 
