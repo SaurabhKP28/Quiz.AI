@@ -143,7 +143,7 @@ Quiz.AI/
 
 ### 1️⃣ Clone the Repository
 
-```bash
+
 git clone https://github.com/SaurabhKP28/Quiz.AI.git
 cd Quiz.AI
 
@@ -158,6 +158,9 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 OPENROUTER_API_KEY=your_openrouter_key
 
+
+
+```bash
 4️⃣ Database Setup (Supabase)
 
 Run in Supabase SQL Editor:
@@ -191,6 +194,8 @@ CREATE POLICY "User can access own quizzes"
 ON quizzes
 FOR ALL
 USING (auth.uid() = user_id);
+
+```
 
 5️⃣ Configure Google OAuth
 
