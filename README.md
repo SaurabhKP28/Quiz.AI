@@ -1,15 +1,11 @@
 # 🚀 Quiz.AI  
 ### AI-Powered Quiz Platform with Authentication, Smart Timers & Analytics
 
-**Quiz.AI** is a modern, full-stack quiz application built with **Next.js**, **Supabase**, and **Google Gemini AI**.  
-It enables users to generate intelligent quizzes on any topic, attempt them with per-question timers, track performance, and view personalized analytics — all with secure authentication and Google OAuth.
+**Quiz.AI** is a modern, full-stack quiz application built with **Next.js**, **Supabase**, and **AI via OpenRouter**.  
+It allows users to generate intelligent quizzes on any topic, attempt them with per-question timers, track performance, and view personalized analytics — all with secure authentication and **Google OAuth**.
 
 🌐 **Live Demo**  
-<<<<<<< HEAD
-👉
-=======
-👉 
->>>>>>> d731b4c (Use OpenRouter and clean next config)
+👉 https://quizaiera.vercel.app/
 
 📦 **GitHub Repository**  
 👉 https://github.com/SaurabhKP28/Quiz.AI.git
@@ -19,7 +15,7 @@ It enables users to generate intelligent quizzes on any topic, attempt them with
 ## ✨ Why Quiz.AI?
 
 - 🤖 AI-generated quizzes on **any topic**
-- 🔐 Secure **user management + Google OAuth**
+- 🔐 Secure **authentication + Google OAuth**
 - ⏱️ Smart **per-question timer system**
 - 📊 **Accuracy & performance analytics**
 - 📖 Detailed explanations for learning
@@ -32,7 +28,7 @@ Designed for **learning, assessment, and growth**.
 ## 🌟 Key Features
 
 ### 🤖 AI-Powered Quiz Generation
-- Powered by **Google Gemini AI**
+- Uses **OpenRouter (LLM gateway)**
 - Generates structured MCQs with:
   - Four options
   - Correct answer
@@ -46,42 +42,41 @@ Designed for **learning, assessment, and growth**.
 
 ### ⏱️ Smart Timer System
 - **1 minute per question**
-- Timer **resets automatically** for every question
-- Auto-moves to the next question on timeout
-- Total quiz time calculated dynamically and shown in results
+- Timer resets automatically per question
+- Auto-advances on timeout
+- Total quiz time calculated dynamically
 
-### 🔐 User Management & OAuth
-- Email & password authentication
-- **Google OAuth login**
+### 🔐 Authentication & User Management
+- Email & password login
+- **Google OAuth**
 - Secure JWT-based sessions
-- User-specific quiz history with full data isolation
+- User-isolated quiz history
 
 ### 📊 Performance Analytics
-- Final score (correct answers)
-- Accuracy percentage
-- Performance label (Excellent / Good / Needs Improvement)
-- Overall progress:
+- Final score & accuracy
+- Performance labels (Excellent / Good / Needs Improvement)
+- Aggregated stats:
   - Quizzes taken
   - Average score
   - Best score
   - Overall accuracy
 
-### 📖 Detailed Results & Review
-- Review every question
-- See correct vs selected answer
-- Read AI-generated explanations
+### 📖 Detailed Results Review
+- Question-by-question breakdown
+- Correct vs selected answer
+- AI-generated explanations
 
 ### 🎨 Modern UI / UX
 - Built with **Tailwind CSS**
-- Clean, minimal, and responsive
-- Works seamlessly on desktop & mobile
+- Clean, minimal design
+- Fully responsive (desktop & mobile)
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 14 (App Router)**
+- **Next.js (App Router)**
 - **React + TypeScript**
 - **Tailwind CSS**
 - **Lucide Icons**
@@ -91,21 +86,17 @@ Designed for **learning, assessment, and growth**.
 - **Supabase Auth (JWT + OAuth)**
 
 ### AI
-<<<<<<< HEAD
-- **Open Router**
-=======
-- **Google OpenRouter API**
->>>>>>> d731b4c (Use OpenRouter and clean next config)
+- **OpenRouter (LLM API Gateway)**
 
 ### Deployment
 - **Vercel**
 
 ---
 
-## 🔐 Authentication & Security
+## 🔐 Security & Authentication
 
 - Supabase Authentication
-- Google OAuth integration
+- Google OAuth
 - JWT-based sessions
 - Row Level Security (RLS)
 - User-isolated database access
@@ -113,6 +104,7 @@ Designed for **learning, assessment, and growth**.
 
 ---
 
+``` bash
 ## 📁 Project Structure
 
 Quiz.AI/
@@ -129,16 +121,13 @@ Quiz.AI/
 │ └── Layout.tsx
 ├── lib/
 │ ├── supabaseClient.ts
-<<<<<<< HEAD
-=======
-│ ├── timeUtils.ts
->>>>>>> d731b4c (Use OpenRouter and clean next config)
 │ ├── openRouterClient.ts
 │ ├── timeUtils.ts
 │ └── types.ts
 ├── public/
 └── docs/
 
+```
 
 ---
 
@@ -147,34 +136,31 @@ Quiz.AI/
 ### Prerequisites
 - Node.js **18+**
 - Supabase account
-- Google Cloud account (Oauth)
-<<<<<<< HEAD
+- Google Cloud account (OAuth)
+- OpenRouter account
 
 ---
 
-=======
-- Open Router
----
-
->>>>>>> d731b4c (Use OpenRouter and clean next config)
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/SaurabhKP28/Quiz.AI.git
 cd Quiz.AI
-<<<<<<< HEAD
+
 2️⃣ Install Dependencies
 npm install
+
 3️⃣ Environment Variables
+
 Create a .env.local file:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-
-openRouter
+OPENROUTER_API_KEY=your_openrouter_key
 
 4️⃣ Database Setup (Supabase)
-Run this in the Supabase SQL Editor:
+
+Run in Supabase SQL Editor:
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -205,7 +191,9 @@ CREATE POLICY "User can access own quizzes"
 ON quizzes
 FOR ALL
 USING (auth.uid() = user_id);
+
 5️⃣ Configure Google OAuth
+
 Supabase → Authentication → Providers → Google
 
 Enable Google provider
@@ -213,42 +201,52 @@ Enable Google provider
 Add redirect URL:
 
 https://your-project.supabase.co/auth/v1/callback
+
 6️⃣ Run Locally
 npm run dev
-Open: http://localhost:3000
+
+
+Open:
+👉 http://localhost:3000
 
 🚀 Deployment
-Push to GitHub
 
-Connect repository to Vercel
+Push code to GitHub
 
-Add environment variables in Vercel
+Import repository into Vercel
+
+Add environment variables
 
 Deploy 🚀
 
 📈 Performance & Optimization
-Automatic code splitting (Next.js)
 
-Optimized images
+Automatic code splitting
 
-Edge caching via Vercel
+Optimized assets
+
+Server-side rendering
 
 Efficient Supabase queries
 
+Edge-ready deployment on Vercel
+
 🧪 Testing Checklist
+
 ✅ Email & Google login
 
-✅ Quiz generation
+✅ AI quiz generation
 
 ✅ Timer reset per question
 
-✅ Result accuracy
+✅ Accurate scoring
 
 ✅ Profile & quiz history
 
 ✅ Mobile responsiveness
 
 🗺️ Roadmap
+
 🌙 Dark mode
 
 🏆 Leaderboards
@@ -262,9 +260,11 @@ Efficient Supabase queries
 🎯 Topic recommendations
 
 📜 License
+
 MIT License © 2024 — Saurabh KP
 
 ⭐ Support & Feedback
+
 If you like this project:
 
 ⭐ Star the repository
@@ -273,34 +273,21 @@ If you like this project:
 
 💬 Share feedback
 
-
 ❤️ Built With Passion
-Quiz.AI showcases real-world full-stack engineering:
 
-Authentication • AI integration • Timers • Analytics • Clean UI
+Quiz.AI demonstrates real-world full-stack engineering:
+
+Authentication • AI Integration • Timers • Analytics • Clean UI
 
 Happy learning! 🚀
 
 
 ---
 
-If you want next:
-- README badges (stars, tech stack, license)
-- GIF demo section
-- Resume-ready project summary
-- GitHub profile pin description
+If you want next, I can:
+- Add **GitHub badges**
+- Create a **GIF demo section**
+- Write a **resume-ready project summary**
+- Create a **portfolio / LinkedIn description**
 
-=======
-
-
-
-
-
-If you want next:
-- README badges (stars, tech stack, license)
-- GIF demo section
-- Resume-ready project summary
-- GitHub profile pin description
-
->>>>>>> d731b4c (Use OpenRouter and clean next config)
 Just tell me 👍
