@@ -147,9 +147,12 @@ Quiz.AI/
 git clone https://github.com/SaurabhKP28/Quiz.AI.git
 cd Quiz.AI
 
+---
+
 ##  2️⃣ Install Dependencies
 npm install
 
+---
 
 ## 3️⃣ Environment Variables
 ``` bash
@@ -278,7 +281,9 @@ Edge-ready deployment on Vercel
 
 🎯 Topic recommendations
 
-📜 License
+---
+
+## 📜 License
 
 MIT License © 2024 — Saurabh KP
 
